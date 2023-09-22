@@ -1,4 +1,9 @@
 # neo one landingpage
 on progress neo one landing page
 # Preview
-![preview-neo-one](https://github.com/saka-C/neo-one-landingpage/assets/111035568/d9825e83-d80c-4435-a328-fefa73f2cb26)
+New Welcoming Page
+![image](https://github.com/saka-C/neo-one-landingpage/assets/111035568/82cde410-9e7b-4ef7-865f-b353ed3106fe)
+
+community learn with neo one
+![image](https://github.com/saka-C/neo-one-landingpage/assets/111035568/068eedf3-c15b-440d-8060-533fd77a3769)
+
