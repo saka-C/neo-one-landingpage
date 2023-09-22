@@ -11,89 +11,119 @@
 <body>
     <div class="container">
         <div class="sidebar">
+            <div class="logo">
+              <img src="asset/logo-no-bg.png" alt="">
+            </div>
             <nav>
-                <a href="#">Learn with Neo</a>
-                <a href="#">Project Properties</a>
-                <a href="#">Community</a>
-                </ul>
+                <a href="eror-page.html" id="hijau">Learn with Neo</a>
+                <a href="eror-page.html" id="kuning">Project Properties</a>
+                <a href="eror-page.html" id="biru">Community</a>
             </nav>
             <div class="logout">
-                <a href="#">Logout</a>
+                <a href="eror-page.html" id="merah"><i class='bx bx-log-out icon' ></i>Logout</a>
             </div>
         </div>
-        <div class="main-content">
-            <!-- Card Postingan -->
+        <div class="mobile-nav">
+          <div class="logo">
+            <img src="asset/logo-no-bg.png" alt="">
+          </div>
+          <div class="custom-select">
+            <p>☰</p>
+            <div class="options">
+              <div class="option"><a href="eror-page.html"><i>📖</i>Learn with Neo</a></div>
+              <div class="option"><a href="eror-page.html"><i>🏗️</i>Project Properties</a></div>
+              <div class="option"><a href="eror-page.html"><i>👋</i>Community</a></div>
+              <div class="option"><a href="eror-page.html"><i class='bx bx-log-out icon' ></i>Logout</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="switch-mobile">
+          <div class="main-content">
+            <div class="search">
+              <input type="text">
+              <button><i class='bx bx-search' ></i></button>
+            </div>
+            <!-- start tambah kartu disini  -->
             <div class="card">
-                <h2>Card Postingan 1</h2>
-                <p>Isi dari postingan 1.</p>
+                <div class="profile">
+                    <img src="asset/profile-gw.jpeg" alt="">
+                    <div class="userinfo">
+                        <p class="username">Shaka Aufa</p>
+                        <p class="stack">Frontend</p>
+                    </div>
+                </div>
+                <p class="post">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae ea doloribus sapiente saepe perspiciatis enim error! Nisi itaque iste sequi magni explicabo aliquid harum doloremque velit, consequatur molestiae cum ipsum.</p>
+                <div class="action">
+                    <button class="like" onclick="toggleLike(this,0)"><i class='bx bxs-heart' ></i><p class="likeCount">0</p></button >
+                </div>
             </div>
             <div class="card">
-                <h2>Card Postingan 2</h2>
-                <p>Isi dari postingan 2.</p>
-            </div>
+                <div class="profile">
+                    <img src="asset/smurfcat.jpg" alt="">
+                    <div class="userinfo">
+                        <p class="username">Smurf Cat</p>
+                        <p class="stack">Backend</p>
+                    </div>
+                </div>
+                <img src="asset/feed-photo.jpg" alt="" style="max-width: 100%;" class="img-post">
+                <p class="post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum beatae aperiam dignissimos similique vel commodi deserunt ut error consequatur architecto!</p>
+                <div class="action">
+                    <button class="like" onclick="toggleLike(this,1)"><i class='bx bxs-heart' ></i><p class="likeCount">0</p></button >
+                </div>
+            </div>    
             <div class="card">
-                <h2>Card Postingan 2</h2>
-                <p>Isi dari postingan 2.</p>
-            </div>
-            <div class="card">
-                <h2>Card Postingan 2</h2>
-                <p>Isi dari postingan 2.</p>
-            </div>
-            <div class="card">
-                <h2>Card Postingan 2</h2>
-                <p>Isi dari postingan 2.</p>
-            </div>
-            <div class="card">
-                <h2>Card Postingan 2</h2>
-                <p>Isi dari postingan 2.</p>
-            </div>
-            <div class="card">
-                <h2>Card Postingan 2</h2>
-                <p>Isi dari postingan 2.</p>
-            </div>
-            <!-- Card Modul Pembelajaran -->
+              <div class="profile">
+                  <img src="asset/amogus.gif" alt="">
+                  <div class="userinfo">
+                      <p class="username">AMOGUS</p>
+                      <p class="stack">Data Analytics</p>
+                  </div>
+              </div>
+              <img src="asset/feed-post2.jpg" alt="" style="max-width: 100%;" class="img-post">
+              <p class="post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum beatae aperiam dignissimos similique vel commodi deserunt ut error consequatur architecto!</p>
+              <div class="action">
+                  <button class="like" onclick="toggleLike(this,1)"><i class='bx bxs-heart' ></i><p class="likeCount">0</p></button >
+              </div>
+          </div>      
+          <!-- end tambah kartu disini  -->
         </div>
         <div class="learning-module">
-            <h2>Modul Belajar</h2>
-            <!-- Card Modul Pembelajaran 1 -->
+            <h2>Lets We Start</h2>
             <div class="module-card">
-            <button class="module-details" onclick="toggleSubBab('module1')">Pertolongan pertama pada kecelakaan</button>
+            <button class="module-details" onclick="toggleSubBab('module1')"><p>Learn HTML</p><i class='bx bxs-down-arrow icon'></i></button>
               <div class="sub-bab" id="module1">
                 <ul>
-                  <li><a href="">Pertolongan pada kecelakaan</a></li>
-                  <li><a href="">Pertolongan pada orang tenggelam</a></li>
-                  <li><a href="">Pingsan</a></li>
-                  <li><a href="">Dll</a></li>
+                  <li><a href="eror-page.html">Structure HTML</a></li>
+                  <li><a href="eror-page.html">Theory</a></li>
+                  <li><a href="eror-page.html">Tag HTML</a></li>
+                  <li><a href="eror-page.html">Link Href</a></li>
                 </ul>
               </div>
             </div>
-          
-            <!-- Card Modul Pembelajaran 2 -->
             <div class="module-card">
-            <button class="module-details" onclick="toggleSubBab('module2')">Pertolongan pertama pada kecelakaan</button>
+            <button class="module-details" onclick="toggleSubBab('module2')"><p>Learn CSS</p><i class='bx bxs-down-arrow icon'></i></button>
               <div class="sub-bab" id="module2">
                 <ul>
-                    <li><a href="">Pertolongan pada kecelakaan</a></li>
-                    <li><a href="">Pertolongan pada orang tenggelam</a></li>
-                    <li><a href="">Pingsan</a></li>
-                    <li><a href="">Dll</a></li>
+                    <li><a href="eror-page.html">What Is CSS</a></li>
+                    <li><a href="eror-page.html">Display Box</a></li>
+                    <li><a href="eror-page.html">Flex Box</a></li>
+                    <li><a href="eror-page.html">Position</a></li>
                   </ul>
               </div>
             </div>
-          
-            <!-- Card Modul Pembelajaran 3 -->
             <div class="module-card">
-            <button class="module-details" onclick="toggleSubBab('module3')">Pertolongan pertama pada kecelakaan</button>
+            <button class="module-details" onclick="toggleSubBab('module3')"><p>Learn JavaScript</p><i class='bx bxs-down-arrow icon'></i></button>
               <div class="sub-bab" id="module3">
                 <ul>
-                    <li><a href="">Pertolongan pada kecelakaan</a></li>
-                    <li><a href="">Pertolongan pada orang tenggelam</a></li>
-                    <li><a href="">Pingsan</a></li>
-                    <li><a href="">Dll</a></li>
+                    <li><a href="eror-page.html">What Is JavaScript; History,Why</a></li>
+                    <li><a href="eror-page.html">How To Use</a></li>
+                    <li><a href="eror-page.html">Const, Let, Var</a></li>
+                    <li><a href="eror-page.html">Aritmathych</a></li>
                   </ul>
               </div>
             </div>
         </div>
+      </div>
           
     </div>
 
@@ -115,7 +145,32 @@ var openModule = null;
       openModule = subBab;
     }
   }
+  const customSelect = document.querySelector(".custom-select");
+    const options = customSelect.querySelector(".options");
 
+    customSelect.addEventListener("click", function () {
+      options.style.display = options.style.display === "block" ? "none" : "block";
+    });
+
+    let isLiked = [false, false]; // Array untuk melacak status like pada setiap card
+
+        function toggleLike(button) {
+            const cardIndex = Array.from(button.parentElement.parentElement.parentElement.parentElement.children).indexOf(button.parentElement.parentElement.parentElement);
+            const likeCountElement = button.querySelector(".likeCount");
+            const likeIcon = button.querySelector("i");
+            
+            if (!isLiked[cardIndex]) {
+                // Jika belum dilike, tambahkan like
+                isLiked[cardIndex] = true;
+                likeCountElement.textContent = parseInt(likeCountElement.textContent) + 1;
+                likeIcon.classList.toggle("liked", true); // Tambahkan atau hilangkan kelas "liked" untuk mengubah warna ikon
+            } else {
+                // Jika sudah dilike, kurangi like
+                isLiked[cardIndex] = false;
+                likeCountElement.textContent = parseInt(likeCountElement.textContent) - 1;
+                likeIcon.classList.toggle("liked", false); // Tambahkan atau hilangkan kelas "liked" untuk mengembalikan warna ikon
+            }
+        }
 </script>
 </body>
 </html>

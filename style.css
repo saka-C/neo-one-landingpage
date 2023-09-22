@@ -10,7 +10,9 @@
     --primary-biru-color: #4285F4;
     --shadow-color: rgba(0, 0, 0, 0.2);
     --text-color: #181818;
-    --stroke-color: #BBBBBB;
+    --stroke-color: #ddd;
+    --link-color: #0D26BF;
+    --hover-color: #2581F7;
 
     /* transition */
     --tran-01: all 0.1s ease;
