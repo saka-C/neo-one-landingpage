@@ -504,8 +504,9 @@ a{
     width: 70%;
 }
 .text-add a{
+    font-size: 20px;
     background-color: var(--primary-biru-color);
-    padding: 10px 30px;
+    padding: 10px 20px;
     color: var(--body-color);
     border-radius: 30px;
     margin-top: 20px;

@@ -9,6 +9,113 @@
     <title>Community</title>
 </head>
 <body>
+    <div class="container">
+        <div class="sidebar">
+            <nav>
+                <a href="#">Learn with Neo</a>
+                <a href="#">Project Properties</a>
+                <a href="#">Community</a>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="#">Logout</a>
+            </div>
+        </div>
+        <div class="main-content">
+            <!-- Card Postingan -->
+            <div class="card">
+                <h2>Card Postingan 1</h2>
+                <p>Isi dari postingan 1.</p>
+            </div>
+            <div class="card">
+                <h2>Card Postingan 2</h2>
+                <p>Isi dari postingan 2.</p>
+            </div>
+            <div class="card">
+                <h2>Card Postingan 2</h2>
+                <p>Isi dari postingan 2.</p>
+            </div>
+            <div class="card">
+                <h2>Card Postingan 2</h2>
+                <p>Isi dari postingan 2.</p>
+            </div>
+            <div class="card">
+                <h2>Card Postingan 2</h2>
+                <p>Isi dari postingan 2.</p>
+            </div>
+            <div class="card">
+                <h2>Card Postingan 2</h2>
+                <p>Isi dari postingan 2.</p>
+            </div>
+            <div class="card">
+                <h2>Card Postingan 2</h2>
+                <p>Isi dari postingan 2.</p>
+            </div>
+            <!-- Card Modul Pembelajaran -->
+        </div>
+        <div class="learning-module">
+            <h2>Modul Belajar</h2>
+            <!-- Card Modul Pembelajaran 1 -->
+            <div class="module-card">
+            <button class="module-details" onclick="toggleSubBab('module1')">Pertolongan pertama pada kecelakaan</button>
+              <div class="sub-bab" id="module1">
+                <ul>
+                  <li><a href="">Pertolongan pada kecelakaan</a></li>
+                  <li><a href="">Pertolongan pada orang tenggelam</a></li>
+                  <li><a href="">Pingsan</a></li>
+                  <li><a href="">Dll</a></li>
+                </ul>
+              </div>
+            </div>
+          
+            <!-- Card Modul Pembelajaran 2 -->
+            <div class="module-card">
+            <button class="module-details" onclick="toggleSubBab('module2')">Pertolongan pertama pada kecelakaan</button>
+              <div class="sub-bab" id="module2">
+                <ul>
+                    <li><a href="">Pertolongan pada kecelakaan</a></li>
+                    <li><a href="">Pertolongan pada orang tenggelam</a></li>
+                    <li><a href="">Pingsan</a></li>
+                    <li><a href="">Dll</a></li>
+                  </ul>
+              </div>
+            </div>
+          
+            <!-- Card Modul Pembelajaran 3 -->
+            <div class="module-card">
+            <button class="module-details" onclick="toggleSubBab('module3')">Pertolongan pertama pada kecelakaan</button>
+              <div class="sub-bab" id="module3">
+                <ul>
+                    <li><a href="">Pertolongan pada kecelakaan</a></li>
+                    <li><a href="">Pertolongan pada orang tenggelam</a></li>
+                    <li><a href="">Pingsan</a></li>
+                    <li><a href="">Dll</a></li>
+                  </ul>
+              </div>
+            </div>
+        </div>
+          
+    </div>
+
     
+<script>
+
+var openModule = null;
+
+  function toggleSubBab(moduleId) {
+    var subBab = document.getElementById(moduleId);
+    if (openModule && openModule !== subBab) {
+      openModule.style.display = "none"; // Menutup card sebelumnya yang terbuka
+    }
+    if (subBab.style.display === "block") {
+      subBab.style.display = "none";
+      openModule = null;
+    } else {
+      subBab.style.display = "block";
+      openModule = subBab;
+    }
+  }
+
+</script>
 </body>
 </html>

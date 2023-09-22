@@ -10,7 +10,7 @@
     --primary-biru-color: #4285F4;
     --shadow-color: rgba(0, 0, 0, 0.2);
     --text-color: #181818;
-    --stroke-color: #BBBBBB;
+    --stroke-color: #ddd;
 
     /* transition */
     --tran-01: all 0.1s ease;
@@ -38,15 +38,133 @@ body{
     
 }
 
-.color-yellow{
-    background-color: var(--primary-kuning-color);
+/* Style the container */
+.container {
+    display: flex;
+    height: 100%;
 }
-.color-red{
-    background-color: var(--primary-merah-color);
+
+/* Style the sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
 }
-.color-blue{
-    background-color: var(--primary-blue-color);
+
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
 }
-.color-green{
-    background-color: var(--primary-hijau-color);
+
+.logout {
+    margin-top: auto;
 }
+
+/* Style the main content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 250px; /* Sesuaikan lebar sidebar dengan width sidebar */
+}
+
+.card {
+    background-color: var(--body-color);
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+
+}
+button.module-details {
+    background: none;
+    color: var(--text-color);
+    width: 200px;
+    padding: 10px;
+    text-align: start;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;   
+    font-weight: 600;  
+    border-bottom: 1px solid var(--stroke-color);     
+  }
+/* Style the learning module column */
+.learning-module {
+    width: 250px;
+    background-color: var(--body-color);
+    border-left: 1px solid var(--stroke-color);
+    color: var(--body-color);
+    padding: 20px;
+}
+.learning-module h2{
+    color: var(--text-color);
+}
+/* Style the module cards in the learning module column */
+.learning-module .module-card {
+    margin-bottom: 20px;
+    border-radius: 5px;
+
+}
+/* Tambahkan gaya untuk tampilan sub bab */
+
+.sub-bab {
+    display: none;
+    color: var(--text-color);
+
+}
+ul{
+    list-style-type: none;
+}
+.learning-module li{
+    font-size: 13px;
+    padding: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;   
+}
+.learning-module li a{
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px;
+    border-bottom: 1px solid var(--stroke-color);
+}
+
+
+
+
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column; 
+    }
+
+    .sidebar {
+        width: 100%; 
+        position: static; 
+    }
+
+    .main-content {
+        margin-left: 0; 
+    }
+
+    .sidebar a {
+        font-size: 16px;
+    }
+
+    .card, .module-card {
+        padding-left: 20px;
+    }
+    .learning-module {
+        width: 100%;
+        border-radius: 10px;
+        border: 1px solid var(--stroke-color);
+    }
+    button.module-details {
+        width: 100%;
+      }
+}
+
