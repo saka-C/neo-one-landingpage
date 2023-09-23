@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./asset/logo-neo1.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style/dashboard.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Profile</title>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+              <img src="asset/logo-no-bg.png" alt="">
+            </div>
+            <nav>
+                <a href="eror-page.html" id="hijau">Learn with Neo</a>
+                <a href="eror-page.html" id="biru">Community</a>
+                <a href="eror-page.html" id="kuning">Project Properties</a>
+            </nav>
+            <div class="bottom-nav">
+                <a href="eror-page.html" id="merah"><i class='bx bxs-user-circle' ></i>Profile</a>
+                <a href="eror-page.html" ><i class='bx bx-log-out icon' ></i>Logout</a>
+            </div>
+        </div>
+        <div class="mobile-nav">
+          <div class="logo">
+            <img src="asset/logo-no-bg.png" alt="">
+          </div>
+          <div class="custom-select">
+            <p>☰</p>
+            <div class="options">
+              <div class="option"><a href="dashboard.html"><i>📖</i>Learn with Neo</a></div>
+              <div class="option"><a href="eror-page.html"><i>👋</i>Community</a></div>
+              <div class="option"><a href="eror-page.html"><i>🏗️</i>Project Properties</a></div>
+              <div class="option"><a href="eror-page.html"><i class='bx bxs-user-circle' ></i>Profile</a></div>
+              <div class="option"><a href="eror-page.html"><i class='bx bx-log-out icon' ></i>Logout</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="switch-mobile">
+            <div class="main-content">
+                <div class="blog-container">
+                    <h1>What Is HTML?</h1>
+                    <div class="thumbnail-blog" >
+                        <img src="asset/feed-photo2.jpg" alt="">
+                    </div>
+                    <p class="desc-blog">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, asperiores voluptate veritatis quae aut unde, molestias quam accusamus accusantium corporis vitae. Ad vero consequuntur inventore qui recusandae eaque possimus neque.</p>
+                    <button class="download"><i class='bx bxs-download bx-tada' ></i>Download Module Here</button>
+                    <div class="blog">
+                        <h2>HTML is</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, culpa maxime! Ex et impedit facere beatae tempora placeat quo ea quasi explicabo alias animi itaque, rem amet exercitationem hic aspernatur voluptates perferendis pariatur dolore odio nihil ab! Minus quae est voluptas veniam eius perspiciatis, nulla incidunt iure eum velit nesciunt?</p>
+                        <h2>How To Use?</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, doloribus necessitatibus delectus sint fugiat dolorum exercitationem nihil numquam aperiam repudiandae expedita non. Neque numquam aliquid sit officiis, at eligendi sapiente debitis voluptatem dolore consequuntur asperiores corrupti, ea laudantium obcaecati cum fuga rem ipsa harum tempore ab? Neque aliquid, esse sapiente dicta unde, minus deleniti beatae nisi omnis repellendus, repudiandae nemo id! Ipsa, error! Odit possimus voluptatem, quia nobis laborum vel beatae laudantium ullam voluptatum, fugit impedit nemo praesentium. Et quo atque velit praesentium. Delectus laboriosam ea impedit, dolor ipsum, veniam corporis nesciunt aspernatur molestiae reiciendis ipsa incidunt suscipit voluptatum amet?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+
+    var openModule = null;
+    
+        function toggleSubBab(moduleId) {
+        var subBab = document.getElementById(moduleId);
+        if (openModule && openModule !== subBab) {
+            openModule.style.display = "none"; // Menutup card sebelumnya yang terbuka
+        }
+        if (subBab.style.display === "block") {
+            subBab.style.display = "none";
+            openModule = null;
+        } else {
+            subBab.style.display = "block";
+            openModule = subBab;
+        }
+        }
+        const customSelect = document.querySelector(".custom-select");
+        const options = customSelect.querySelector(".options");
+    
+        customSelect.addEventListener("click", function () {
+            options.style.display = options.style.display === "block" ? "none" : "block";
+        });
+    
+        let isLiked = [false, false]; // Array untuk melacak status like pada setiap card
+    
+            function toggleLike(button) {
+                const cardIndex = Array.from(button.parentElement.parentElement.parentElement.parentElement.children).indexOf(button.parentElement.parentElement.parentElement);
+                const likeCountElement = button.querySelector(".likeCount");
+                const likeIcon = button.querySelector("i");
+                
+                if (!isLiked[cardIndex]) {
+                    // Jika belum dilike, tambahkan like
+                    isLiked[cardIndex] = true;
+                    likeCountElement.textContent = parseInt(likeCountElement.textContent) + 1;
+                    likeIcon.classList.toggle("liked", true); // Tambahkan atau hilangkan kelas "liked" untuk mengubah warna ikon
+                } else {
+                    // Jika sudah dilike, kurangi like
+                    isLiked[cardIndex] = false;
+                    likeCountElement.textContent = parseInt(likeCountElement.textContent) - 1;
+                    likeIcon.classList.toggle("liked", false); // Tambahkan atau hilangkan kelas "liked" untuk mengembalikan warna ikon
+                }
+            }
+</script>    
+</body>
+</html>

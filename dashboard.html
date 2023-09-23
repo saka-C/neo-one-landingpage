@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./asset/logo-neo1.png" type="image/x-icon">
-    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="./style/dashboard.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Community</title>
+    <title>Learn With Neo One</title>
 </head>
 <body>
     <div class="container">
@@ -15,12 +15,13 @@
               <img src="asset/logo-no-bg.png" alt="">
             </div>
             <nav>
-                <a href="eror-page.html" id="hijau">Learn with Neo</a>
-                <a href="eror-page.html" id="kuning">Project Properties</a>
+                <a href="eror-page.html" id="hijau">Learn with Neo One</a>
                 <a href="eror-page.html" id="biru">Community</a>
+                <a href="eror-page.html" id="kuning">Project Properties</a>
             </nav>
-            <div class="logout">
-                <a href="eror-page.html" id="merah"><i class='bx bx-log-out icon' ></i>Logout</a>
+            <div class="bottom-nav">
+                <a href="eror-page.html" id="merah"><i class='bx bxs-user-circle' ></i>Profile</a>
+                <a href="eror-page.html" ><i class='bx bx-log-out icon' ></i>Logout</a>
             </div>
         </div>
         <div class="mobile-nav">
@@ -30,9 +31,10 @@
           <div class="custom-select">
             <p>☰</p>
             <div class="options">
-              <div class="option"><a href="eror-page.html"><i>📖</i>Learn with Neo</a></div>
-              <div class="option"><a href="eror-page.html"><i>🏗️</i>Project Properties</a></div>
+              <div class="option"><a href="eror-page.html"><i>📖</i>Learn with Neo One</a></div>
               <div class="option"><a href="eror-page.html"><i>👋</i>Community</a></div>
+              <div class="option"><a href="eror-page.html"><i>🏗️</i>Project Properties</a></div>
+              <div class="option"><a href="eror-page.html"><i class='bx bxs-user-circle' ></i>Profile</a></div>
               <div class="option"><a href="eror-page.html"><i class='bx bx-log-out icon' ></i>Logout</a></div>
             </div>
           </div>
@@ -46,45 +48,58 @@
             <!-- start tambah kartu disini  -->
             <div class="card">
                 <div class="profile">
-                    <img src="asset/profile-gw.jpeg" alt="">
+                    <img class="photo-profile" src="asset/profile-gw.jpeg" alt="">
                     <div class="userinfo">
-                        <p class="username">Shaka Aufa</p>
-                        <p class="stack">Frontend</p>
+                        <p class="name"><a href="user.html">Shaka Aufa</a></p>
+                            <button class="stack">Frontend</button>
+                            <button class="stack">Tutors</button>
                     </div>
                 </div>
+                <div class="img-post">
+                  <img src="asset/feed-photo2.jpg" alt="" style="max-width: 100%;">
+                </div>
+                <h2 class="title-post"><a href="blog.html">What Is HTML?</a></h2>
                 <p class="post">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae ea doloribus sapiente saepe perspiciatis enim error! Nisi itaque iste sequi magni explicabo aliquid harum doloremque velit, consequatur molestiae cum ipsum.</p>
                 <div class="action">
-                    <button class="like" onclick="toggleLike(this,0)"><i class='bx bxs-heart' ></i><p class="likeCount">0</p></button >
+                    <button class="like" onclick="toggleLike(this,0)"><i class='bx bxs-heart like-btn' ></i><p class="likeCount">0</p></button >
                 </div>
-            </div>
+              </div>
             <div class="card">
                 <div class="profile">
-                    <img src="asset/smurfcat.jpg" alt="">
+                    <img class="photo-profile" src="asset/smurfcat.jpg" alt="">
                     <div class="userinfo">
-                        <p class="username">Smurf Cat</p>
-                        <p class="stack">Backend</p>
+                        <p class="name"><a href="">Smurf Cat</a></p>
+                            <button class="stack">Backend</button>
+                            <button class="stack">Tutors</button>
                     </div>
                 </div>
-                <img src="asset/feed-photo.jpg" alt="" style="max-width: 100%;" class="img-post">
+                <div class="img-post">
+                  <img src="asset/feed-photo.jpg" alt="" style="max-width: 100%;">
+                </div>
+                <h2 class="title-post"><a href="blog.html">What Is Backend Developer</a></h2>
                 <p class="post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum beatae aperiam dignissimos similique vel commodi deserunt ut error consequatur architecto!</p>
                 <div class="action">
-                    <button class="like" onclick="toggleLike(this,1)"><i class='bx bxs-heart' ></i><p class="likeCount">0</p></button >
+                    <button class="like" onclick="toggleLike(this,1)"><i class='bx bxs-heart like-btn' ></i><p class="likeCount">0</p></button >
                 </div>
             </div>    
             <div class="card">
               <div class="profile">
-                  <img src="asset/amogus.gif" alt="">
+                  <img class="photo-profile" src="asset/amogus.gif" alt="">
                   <div class="userinfo">
-                      <p class="username">AMOGUS</p>
-                      <p class="stack">Data Analytics</p>
+                      <p class="name"><a href="">AMOGUS</a></p>
+                      <button class="stack">Data Science</button>
+                      <button class="stack">Tutors</button>
                   </div>
               </div>
-              <img src="asset/feed-post2.jpg" alt="" style="max-width: 100%;" class="img-post">
+              <div class="img-post">
+                <img src="asset/feed-post2.jpg" alt="" style="max-width: 100%;">
+              </div>
+              <h2 class="title-post"><a href="blog.html">What Is Data Science</a></h2>
               <p class="post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum beatae aperiam dignissimos similique vel commodi deserunt ut error consequatur architecto!</p>
               <div class="action">
-                  <button class="like" onclick="toggleLike(this,1)"><i class='bx bxs-heart' ></i><p class="likeCount">0</p></button >
+                  <button class="like" onclick="toggleLike(this,2)"><i class='bx bxs-heart like-btn' ></i><p class="likeCount">0</p></button >
               </div>
-          </div>      
+            </div>      
           <!-- end tambah kartu disini  -->
         </div>
         <div class="learning-module">
