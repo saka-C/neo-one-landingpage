@@ -7,3 +7,7 @@ New Welcoming Page
 community learn with neo one
 ![image](https://github.com/saka-C/neo-one-landingpage/assets/111035568/068eedf3-c15b-440d-8060-533fd77a3769)
 
+blog
+![image](https://github.com/saka-C/neo-one-landingpage/assets/111035568/49feeaf2-1a37-4e59-a1cc-014d5d8f8957)
+
+
