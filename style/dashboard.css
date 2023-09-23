@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
 
 :root{
     /* Color */
@@ -39,7 +42,7 @@ body{
     height: 100vh;
     background: var(--body-color);
     transition: var(--tran-04);
-    
+    scroll-behavior: smooth;
 }
 
 /* Style the container */
@@ -280,10 +283,15 @@ button.module-details {
 /* Style the learning module column */
 .learning-module {
     width: 250px;
+    max-height: 100%;
+    overflow-y: hidden;
     background-color: var(--body-color);
     border-left: 1px solid var(--stroke-color);
     color: var(--body-color);
     padding: 20px;
+    border-bottom: 1px solid var(--stroke-color);
+    border-radius: 0px 0px 0px 10px;
+
 }
 .learning-module h2{
     color: var(--text-color);
@@ -292,7 +300,6 @@ button.module-details {
 .learning-module .module-card {
     margin-bottom: 20px;
     border-radius: 5px;
-
 }
 /* Tambahkan gaya untuk tampilan sub bab */
 
@@ -321,9 +328,38 @@ ul{
     text-decoration: underline;
     color: var(--hover-color);
 }
+.modul-container{
+    height: calc(100% - 70px);
+}
+.bg-view-all{
+    background-color: rgb(254, 254, 254);
+    filter: blur(7px);
+    border-radius: 10px;
+    color: var(--body-color);
+    padding: 20px;
+}
+#view-all{
+    position: relative;
+    top: -70px;
+    display: flex;
+    justify-content: center;
+    color: var(--link-color);
+    font-weight: 500;
+    text-decoration: none;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 400; 
+    word-wrap: break-word
+}
+#view-all:hover{
+    color: var(--hover-color);
+    text-decoration: underline;
+}
 @media (max-width: 800px){
     .card .profile img{
         width: 40px;
+        height: 40px;
     }
 }
 
@@ -343,6 +379,10 @@ ul{
     }
     .main-content {
         margin-left: 0; 
+        padding: 5px;
+    }
+    .search{
+        margin-top: 20px;
     }
     .search input{
         width: 100%;
@@ -406,8 +446,12 @@ ul{
     .card, .module-card {
         padding-left: 20px;
     }
+    .modul-container{
+        height: calc(100% - 95px);
+    }
     .learning-module {
         width: 100%;
+        max-height: 400px;
         border-radius: 5px;
         border: 1px solid var(--stroke-color);
     }
@@ -553,5 +597,8 @@ p.desc{
         width: 100%; 
         height: 100%; 
         object-fit: contain;
+    }
+    .blog-container{
+        padding: 3px;
     }
 }
