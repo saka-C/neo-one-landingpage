@@ -18,6 +18,7 @@ html {
     --link-color: #0D26BF;
     --hover-color: #0458c5;
     --btn-color: #1F883D;
+    --btn-color-shadow: #1f883d5f;
 
     /* transition */
     --tran-01: all 0.1s ease;
@@ -44,8 +45,232 @@ body{
     transition: var(--tran-04);
     scroll-behavior: smooth;
 }
+.floating-button-container{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 20px;
+    left: 73%;
+}
+@media  (max-width : 1297px) {
+    .floating-button-container{
+        left: 68%;
+    } 
+}
+@media  (max-width : 1097px) {
+    .floating-button-container{
+        left: 65%;
+    } 
+}
+@media  (max-width : 1044px) {
+    .floating-button-container{
+        left: 64%;
+    } 
+}
+@media  (max-width : 967px) {
+    .floating-button-container{
+        left: 60%;
+    } 
+}
+@media  (max-width : 860px) {
+    .floating-button-container{
+        left: 55%;
+    } 
+}
+@media  (max-width : 800px) {
+    .floating-button-container{
+        left: 80%;
+    } 
+}
+.floating-button {
+    animation: float 2s infinite;
+}
 
-/* Style the container */
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.plus {
+    cursor: pointer;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    background-color: var(--primary-biru-color);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    border: none;
+    font-size: 36px;
+    color: var(--body-color);
+    font-weight: bold;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.floating-nav{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--body-color);
+    border-radius: 100px;
+    gap: 15px;
+    border: 1px solid var(--stroke-color);
+    display: none;
+}
+.floating-nav button{
+    border: none;
+    font-size: 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    padding: 10px;
+    color: var(--body-color);
+    background-color: var(--primary-biru-color);
+    
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan */
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* Menetapkan indeks z tinggi untuk menempatkannya di atas konten lain */
+  }
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--body-color);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 50%;
+    max-width: 80%; /* Lebar maksimum popup */
+    max-height: 80%; /* Tinggi maksimum popup */
+    overflow: auto; /* Tampilkan scrollbar jika kontennya terlalu besar */
+  }
+@media  (max-width : 1133px) {
+    .popup-content {
+        width: 70%;
+      }
+
+}
+@media  (max-width : 800px) {
+    .popup-content{
+        width: 100%;
+      }
+
+}
+    
+
+textarea.post{
+    width: 100%;
+    resize:vertical;
+    min-height: 80px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid var(--stroke-color-draken);
+    padding: 10px;
+}
+textarea.post:focus{
+    outline: none;
+}
+  /* Gaya tombol tutup */
+.close-button {
+    position: relative;
+    left: 49%;
+    bottom: 10px;
+    cursor: pointer;
+    background-color: var(--primary-biru-color);
+    padding: 3px 9px;
+    border-radius: 20px;
+    color: var(--body-color);
+    font-weight: 600;
+}
+.popup p{
+    text-align: start;
+    color: var(--primary-merah-color);
+}
+#popup-post-text textarea{
+    margin-top: 7px;
+    min-height: 300px;
+}
+#popup-post-text p{
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 25px;
+}
+.file-input {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Tinggi maksimum yang diinginkan */
+    overflow: hidden;
+    border: 2px dashed var(--stroke-color); /* Garis putus-putus */
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 auto; /* Tengahkan elemen */
+  }
+
+  .file-input input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  /* Gaya label untuk ikon tambah atau gambar */
+  .file-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--stroke-color);
+    cursor: pointer;
+  }
+
+  /* Gaya untuk menampilkan gambar di dalam kotak */
+  .file-preview {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .file-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Gambar tetap ada dalam kotak dengan aspek ratio yang sesuai */
+  }
+
 .container {
     display: flex;
     height: 100%;
@@ -53,7 +278,17 @@ body{
 .switch-mobile{
     display: flex;
 }
+button[type="submit"]{
+    width: 100%;
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--primary-biru-color);
+    color: var(--body-color);
+    margin-top: 10px;
+}
 /* Style the sidebar */
+
 .sidebar {
     width: 250px;
     background-color: var(--body-color);
@@ -601,4 +836,19 @@ p.desc{
     .blog-container{
         padding: 3px;
     }
+}
+
+
+/* ============= Learn Module CSS ============== */
+
+.card-learn-module{
+    border: 1px solid var(--stroke-color);
+    padding: 20px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.card-learn-module a{
+    color: var(--text-color);
+    text-decoration: none;
 }
