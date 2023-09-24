@@ -19,6 +19,7 @@ html {
     --hover-color: #0458c5;
     --btn-color: #1F883D;
     --btn-color-shadow: #1f883d5f;
+    --hover-white-color: #eeeeee68;
 
     /* transition */
     --tran-01: all 0.1s ease;
@@ -695,7 +696,15 @@ ul{
       }
 }
 
-/* =========== profile page CSS =========== */
+/* =========== user page CSS =========== */
+.user-hover a{
+    color: var(--link-color);
+    text-decoration: none;
+}
+.user-hover a:hover{
+    color: var(--hover-color);
+    text-decoration: underline;
+}
 .profile-page{
     width: 100%;
     color: var(--text-color);
@@ -758,6 +767,28 @@ p.desc{
     margin-bottom: 10px;
     color: var(--text-color);
 }
+.card-blog{
+    border: 1px solid var(--stroke-color);
+    padding: 20px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.card-blog h3{
+    font-size: 25px;
+}
+.img-blog-profile-user{
+    width: 100%; 
+    height: 300px;  
+    padding-bottom: 10px;
+}
+.img-blog-profile-user img{
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    border-radius: 20px;
+    border: 1px solid var(--stroke-color);
+}
 @media (max-width: 800px){
     .profile-page .profile{
         flex-direction: column;
@@ -767,6 +798,15 @@ p.desc{
         overflow: hidden;           
         text-overflow: ellipsis;   
         width: 100%; 
+    }
+    .img-blog-profile-user{
+        width: 100%; 
+        height: 100%; 
+    }
+    .img-blog-profile-user img{
+        width: 100%; 
+        height: 100%; 
+        object-fit: contain;
     }
 }
 
@@ -782,11 +822,11 @@ p.desc{
 .desc-blog{
     margin-bottom: 20px;
 }
-.blog-container .download{
+.download{
     background-color: var(--primary-biru-color);
     color: var(--body-color);
     text-decoration: none;
-    padding: 7px 15px;
+    padding: 7px 10px;
     border-radius: 20px;
     border: none;
     display: flex;
@@ -840,15 +880,57 @@ p.desc{
 
 
 /* ============= Learn Module CSS ============== */
-
-.card-learn-module{
+.list-learn-container{
+    width: 100%;
+}
+.card-list-learn{
     border: 1px solid var(--stroke-color);
     padding: 20px;
+    background-color: var(--body-color);
     box-shadow: 0 2px 4px var(--shadow-color);
     border-radius: 5px;
+    cursor: pointer;
     margin-bottom: 20px;
 }
-.card-learn-module a{
+.card-list-learn:hover{
+    background-color: var(--hover-white-color);
+}
+.list-learn a{
     color: var(--text-color);
     text-decoration: none;
+}
+
+/* ============= Module CSS ============== */
+.learn-module-container {
+    width: 100%;
+}
+.card-learn-module{
+    border: 1px solid var(--stroke-color);
+    background-color: var(--body-color);
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    padding: 20px;
+}
+.card-learn-module a{
+    color: var(--link-color);
+    text-decoration: none;
+}
+.card-learn-module a:hover{
+    color: var(--hover-color);
+    text-decoration: underline;
+}
+.card-learn-module span{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+@media (max-width: 800px){
+    .card-learn-module span{
+        display: flex;
+        gap: 10px;
+        align-items: start;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
 }
