@@ -131,3 +131,4 @@ function tampilkanPreview() {
       reader.readAsDataURL(inputFoto.files[0]);
     }
   }
+

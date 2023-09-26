@@ -19,7 +19,7 @@ html {
     --hover-color: #0458c5;
     --btn-color: #1F883D;
     --btn-color-shadow: #1f883d5f;
-    --hover-white-color: #eeeeee68;
+    --hover-white-color: #f1f1f168;
 
     /* transition */
     --tran-01: all 0.1s ease;
@@ -822,12 +822,15 @@ p.desc{
 .desc-blog{
     margin-bottom: 20px;
 }
+.download i{
+    margin-right: 5px;
+}
 .download{
     background-color: var(--primary-biru-color);
     color: var(--body-color);
     text-decoration: none;
     padding: 7px 10px;
-    border-radius: 20px;
+    border-radius: 10px;
     border: none;
     display: flex;
     align-items: center;
@@ -880,37 +883,88 @@ p.desc{
 
 
 /* ============= Learn Module CSS ============== */
+.list-learn-first-container{
+    flex-direction: column;
+}
 .list-learn-container{
-    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
 }
-.card-list-learn{
-    border: 1px solid var(--stroke-color);
-    padding: 20px;
-    background-color: var(--body-color);
-    box-shadow: 0 2px 4px var(--shadow-color);
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
-.card-list-learn:hover{
-    background-color: var(--hover-white-color);
-}
-.list-learn a{
+.list-learn-container a{
     color: var(--text-color);
     text-decoration: none;
 }
-
+.card-list .text-card {
+    padding: 10px;
+}
+.card-list .text-card p{
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Jumlah baris yang ingin ditampilkan */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.card-list:hover{
+    background-color: var(--hover-white-color);
+}
+.card-list{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--body-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    width: 100%;
+    transition: var(--tran-02);
+}
+.card-list .img-card{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 10px;
+}
+.card-list img{
+    width: 50%;
+}
+@media (max-width: 800px){
+    .list-learn-container{
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .card-list img{
+        width: 50%;
+    }
+}
+@media (max-width: 400px){
+    .card-list .img-card{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .card-list img{
+        width: 70%;
+    }
+}
 /* ============= Module CSS ============== */
 .learn-module-container {
     width: 100%;
+    flex-direction: column;
+}
+.learn-module{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto auto auto auto;
 }
 .card-learn-module{
     border: 1px solid var(--stroke-color);
     background-color: var(--body-color);
     width: 100%;
     margin-bottom: 10px;
-    border-radius: 15px;
+    border-radius: 10px;
     padding: 20px;
+    box-shadow: 0 2px 4px var(--shadow-color);
 }
 .card-learn-module a{
     color: var(--link-color);
@@ -925,6 +979,21 @@ p.desc{
     justify-content: space-between;
     margin-bottom: 10px;
 }
+.card-learn-module p{
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Jumlah baris yang ingin ditampilkan */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+@media (max-width: 1204px){
+    .card-learn-module span{
+        display: flex;
+        gap: 10px;
+        align-items: start;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+}
 @media (max-width: 800px){
     .card-learn-module span{
         display: flex;
@@ -932,5 +1001,9 @@ p.desc{
         align-items: start;
         flex-direction: column;
         margin-bottom: 10px;
+    }
+    .learn-module{
+        display: grid;
+        grid-template-columns: auto;
     }
 }
