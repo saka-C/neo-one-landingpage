@@ -900,7 +900,7 @@ p.desc{
 }
 .card-list .text-card p{
     display: -webkit-box;
-    -webkit-line-clamp: 2; /* Jumlah baris yang ingin ditampilkan */
+    -webkit-line-clamp: 2; 
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -986,12 +986,9 @@ p.desc{
     overflow: hidden;
 }
 @media (max-width: 1204px){
-    .card-learn-module span{
-        display: flex;
-        gap: 10px;
-        align-items: start;
-        flex-direction: column;
-        margin-bottom: 10px;
+    .learn-module{
+        display: grid;
+        grid-template-columns: auto auto;
     }
 }
 @media (max-width: 800px){
@@ -1005,5 +1002,162 @@ p.desc{
     .learn-module{
         display: grid;
         grid-template-columns: auto;
+    }
+}
+
+/* ============= Community CSS ============== */
+.community-after-join-container{
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.community-after-join-card{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid var(--stroke-color);
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.message{
+    display: flex;
+    align-items: center;
+    color: var(--stroke-color-draken);
+}
+.message p{
+    font-size: 12px;
+    margin-right: 7px;
+}
+.message i{
+    font-size: 20px;
+}
+.all-message{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-weight: 600;
+    font-size: 10px;
+}
+.all-message p{
+    display: flex;
+    align-items: center;
+    background-color: red;
+    padding: 0px 7px;
+    border-radius: 20px;
+    color: var(--body-color);
+}
+.main-community-card-container{
+    display: flex;
+    flex-direction: column;
+}
+.community-card-container{
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: auto auto auto auto;
+}
+.user-joining{
+    display: flex;
+    justify-content: end;
+}
+.img-user-joining{
+    display: flex;
+    justify-content: center;
+}
+.img-user-joining img{
+    width: 25px;
+    height: 25px;
+    border-radius: 100px;
+}
+
+.community-card{
+    background-color: var(--body-color);
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+.community-card-image{
+    width: 100%; 
+    height: 200px;
+    padding-bottom: 15px;
+}
+.community-card-image img{
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid var(--stroke-color);
+}
+.community-card p{
+    font-weight: 600;
+}
+.community-card button{
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+.community-card .join{
+    color: var(--body-color);
+    background-color: var(--primary-biru-color);
+}
+.community-card .view{
+    background-color: var(--hover-white-color);
+    border: 1px solid var(--stroke-color);
+}
+@media (max-width: 1204px){
+    .community-card-container{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 20px;
+    }
+}
+@media (max-width: 1031px){
+    .community-card-container{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 20px;
+    }
+}
+@media (max-width: 800px){
+    .community-card-container{
+        justify-content: center;
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+}
+@media (max-width: 715px){
+    .community-card-container{
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+    }
+    .community-card{
+        width: 100%;
+    }
+}
+@media (max-width: 480px){
+    .community-card-container{
+        display: grid;
+        grid-template-columns: repeat(2, 47%);
+    }
+    .community-card-image{
+        width: 100%; 
+        height: 150px;
+        padding-bottom: 15px;
+    }
+    .community-card-image img{
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover;
+        border-radius: 5px;
+        border: 1px solid var(--stroke-color);
+    }
+    .community-card{
+        width: 100%;
+    }
+    .community-card p{
+        font-size: 11px;
     }
 }
