@@ -1057,6 +1057,12 @@ p.desc{
 .user-joining{
     display: flex;
     justify-content: end;
+    margin-top: 5px;
+}
+.total-user-joining{
+    font-size: 11px;
+    color: var(--stroke-color);
+    margin-right: 3px;
 }
 .img-user-joining{
     display: flex;
