@@ -1010,6 +1010,21 @@ p.desc{
     padding: 10px;
     margin-bottom: 10px;
 }
+.community-after-join-container a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+.profile-card-community{
+    display: flex;
+    align-items: center;
+}
+.profile-card-community img{
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--stroke-color);
+    border-radius: 100px;
+}
 .community-after-join-card{
     display: flex;
     justify-content: space-between;
@@ -1017,6 +1032,23 @@ p.desc{
     border: 1px solid var(--stroke-color);
     margin-bottom: 10px;
     border-radius: 10px;
+}
+.last-seen{
+    display: flex;
+    align-items: center;
+    color: var(--stroke-color-draken);
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.last-seen i{
+    margin-right: 5px;
+}
+.message-wrapper{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: end;
+
 }
 .message{
     display: flex;
@@ -1048,6 +1080,9 @@ p.desc{
 .main-community-card-container{
     display: flex;
     flex-direction: column;
+}
+.community-name h2{
+    font-size: 20px;
 }
 .community-card-container{
     display: grid;
@@ -1107,7 +1142,7 @@ p.desc{
 }
 .community-card .join{
     color: var(--body-color);
-    background-color: var(--primary-biru-color);
+    background-color: var(--btn-color);
 }
 .community-card .view{
     background-color: var(--hover-white-color);
@@ -1127,6 +1162,12 @@ p.desc{
         gap: 20px;
     }
 }
+@media (max-width: 875px){
+    .message p{
+        display: none;
+    }
+
+}
 @media (max-width: 800px){
     .community-card-container{
         justify-content: center;
@@ -1144,6 +1185,11 @@ p.desc{
     .community-card{
         width: 100%;
     }
+    .community-name h2{
+        font-size: 15px;
+    }
+}
+@media (max-width: 530px){
 }
 @media (max-width: 480px){
     .community-card-container{
