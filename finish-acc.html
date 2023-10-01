@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./asset/logo-neo1.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style/login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Almost There!</title>
+</head>
+<body>
+    <div class="form-container describe-container">
+        <form action="">
+            <h3>choose what describes yourself</h3>
+            <div class="describe">
+                <label for="">🎋Front-End Developer</label>
+                <div class="checkbox-btn">
+                    <input type="checkbox">
+                    <span><p>.</p></span>
+                </div>
+            </div>
+            <div class="describe">
+                <label for="">🏗️Back-End Developer</label>
+                <div class="checkbox-btn">
+                    <input type="checkbox">
+                    <span><p>.</p></span>
+                </div>
+            </div>
+            <div class="describe">
+                <label for="">📷ML Developer</label>
+                <div class="checkbox-btn">
+                    <input type="checkbox">
+                    <span><p>.</p></span>
+                </div>
+            </div>
+            <div class="btn-finish">
+                <button id="later"><a href="dashboard.html">Remind Me Later</a></button>
+                <button type="submit">Finish</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+const checkboxes = document.querySelectorAll('.describe');
+
+checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('click', function() {
+        // if (this.checked) {
+        //     this.classList.add('checked');
+        // } else {
+        //     this.classList.remove('checked');
+        // }
+        this.classList.toggle('checked')
+    });
+});
+
+    </script>
+</body>
+</html>
