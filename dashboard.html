@@ -15,9 +15,10 @@
               <img src="asset/logo-no-bg.png" alt="">
             </div>
             <nav>
-                <a href="#" id="hijau">Learn with Neo One</a>
+                <a href="dashboard.html" id="merah">Home</a>
+                <a href="list-learn.html" id="hijau">Learn with Neo One</a>
                 <a href="community.html" id="biru">Community</a>
-                <a href="#" id="kuning">Project Properties</a>
+                <a href="project-properties.html" id="kuning">Project Properties</a>
             </nav>
             <div class="bottom-nav">
                 <a href="#" id="merah"><i class='bx bxs-user-circle' ></i>Profile</a>
@@ -158,7 +159,6 @@
 <!-- =========== popup for post-img-text ========= -->
       <div class="popup" id="popup-post-img-text">
         <div class="popup-content">
-          <span class="close-button" id="close-button-img">&times;</span>
           <form action="">
             <div class="file-input">
               <input type="file" id="inp-foto" accept="image/*" onchange="tampilkanPreview()">
@@ -169,7 +169,10 @@
             </div>
             <p>*Gambar hanya preview</p>
             <textarea name="" id="" class="post"></textarea>
-            <button type="submit">Poting</button>
+            <div class="btn-popup">
+              <button id="close-button-img">Go Back</button>
+              <button type="submit">Poting</button>
+            </div>
           </form>
         </div>
       </div>
@@ -178,11 +181,13 @@
 <!-- =========== popup for post-text ========= -->
   <div class="popup" id="popup-post-text">
     <div class="popup-content">
-      <span class="close-button" id="close-button-text">&times;</span>
       <form action="">
         <p>Postingan Baru</p>
         <textarea name="" id="" class="post" placeholder="Ceritakan apa saja👋"></textarea>
-        <button type="submit">Poting</button>
+        <div class="btn-popup">
+          <button id="close-button-text">Go Back</button>
+          <button type="submit">Poting</button>
+        </div>
       </form>
     </div>
   </div>
