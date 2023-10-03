@@ -1,23 +1,25 @@
-const burger = document.querySelector('.burger');
-const navLinks = document.querySelector('.nav-links');
-
-burger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
 
 
-const navbar = document.querySelector(".navbar");
 
 // scrolled
 // ================
+const Nav = document.querySelector(".navbar");
+const mobileNav = document.querySelector(".hamburger");
 window.addEventListener("scroll", function () {
   if (window.scrollY > 0) {
-    navbar.classList.add("scrolled");
+    Nav.classList.add("scrolled");
+    mobileNav.classList.add("scrolled");
   } else {
-    navbar.classList.remove("scrolled");
+    Nav.classList.remove("scrolled");
+    mobileNav.classList.remove("scrolled");
   }
 })
 
 
 
+const customSelect = document.querySelector(".custom-select");
+const options = customSelect.querySelector(".options");
 
+customSelect.addEventListener("click", function () {
+  options.style.display = options.style.display === "block" ? "none" : "block";
+});

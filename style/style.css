@@ -11,8 +11,12 @@
     --shadow-color: rgba(0, 0, 0, 0.2);
     --text-color: #181818;
     --stroke-color: #ddd;
+    --stroke-color-draken:#898989;
     --link-color: #0D26BF;
-    --hover-color: #2581F7;
+    --hover-color: #0458c5;
+    --btn-color: #1F883D;
+    --btn-color-shadow: #1f883d5f;
+    --hover-white-color: #f1f1f168;
 
     /* transition */
     --tran-01: all 0.1s ease;
@@ -54,24 +58,20 @@ body{
 }
 /* Navbar
 ================================================= */
-.navbar.scrolled a{
-    color: var(--text-color);
+.hamburger.scrolled{
+    background-color: var(--body-color);
+    box-shadow: 0 2px 4px var(--shadow-color);
 }
-.navbar.scrolled button{
-    color: var(--text-color);
+.navbar.scrolled{
+    background-color: var(--body-color);
+    box-shadow: 0 2px 4px var(--shadow-color);
 }
-.navbar.scrolled {
-    background: var(--body-color);
-    transition: var(--tran-04);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
-}
-.navbar.scrolled .line{
-    background-color: var(--text-color);
-}
+
 a{
     text-decoration: none;
 }
-.navbar {
+
+.navbar{
     position: fixed;
     top: 0;
     left: 0;
@@ -79,96 +79,24 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px;
-    color: var(--primary-color-light);
+    padding: 10px;
     z-index: 1000; /* Menetapkan indeks-z untuk memastikan navbar tetap di atas konten */
     transition: background-color 0.3s ease; /* Transisi warna latar belakang ketika di-scroll */
 }
-
-.nav-tiket .logo-text a,
-.nav-tiket .nav-links a,
-.nav-tiket .profile a,
-.nav-tiket .profile button{
-    color: var(--text-color);
-}
-
-.logo {
+.navbar img{
     margin-left: 20px;
+    width: 80px;
+}
+.navlink{
     display: flex;
     align-items: center;
-    
+    gap: 20px;
 }
-
-.logo-text {
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-    
-}
-.logo-text a {
-    color: var(--primary-color-light);
-}
-
-.logo img {
-    margin-left: 15px;
-    max-height: 20px;
-}
-.con-nav-prof{
-    display: flex;
-    justify-content: end;
-    align-items: center;
-}
-
-.nav-links{
-    margin: 0;
-    gap: 0;
-}
-.nav-links a {
-    text-decoration: none;
-    color: var(--primary-color-light);
-    transition: var(--tran-02);
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-weight: 500;
+.navlink a{
+    color: var(--text-color);
+    padding: 10px 20px;
+    transition: var(--tran-03);
     border-radius: 20px;
-}
-.nav-links a:hover{
-    background-color: var(--primary-color);
-    color: var(--primary-color-light);
-}
-
-.burger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.line {
-    width: 25px;
-    height: 3px;
-    background-color: var(--primary-color-light);
-    margin: 3px 0;
-}
-.drop-prof{
-    display: none;
-}
-.profile{
-    margin-right: 30px;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    width: 50%;
-}
-.profile a{
-    font-weight: 700;
-    color: var(--primary-color-light);
-}
-.profile img{
-    padding: 10px;
-    width: 9%;
-    margin-left: 10px;
-    border-radius: 100px;
 }
 #nav-biru:hover{
     background-color: var(--primary-biru-color);
@@ -198,102 +126,75 @@ a{
     box-shadow: 0 2px 6px var(--primary-kuning-color);
 }
 
-
-/* ... CSS Anda yang sudah ada ... */
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  .profile button{
-    color: var(--primary-color-light);
-    margin-left: 10px;
-  }
-  .dropbtn {
-    background: none;
-    font-size: 13px;
-    border: none;
-    cursor: pointer;
-  }
-  .dropdown-content {
+  .mobile-nav{
     display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 190px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #f1f1f1;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-
+}
 @media screen and (max-width: 768px) {
-    
     .navbar{
-        background-color: var(--body-color);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
-    }
-    .navbar .line{
-        background-color: var(--text-color);
-    }
-    .nav-links {
         display: none;
-        flex-direction: column;
-        background-color: #dddfdd;
-        position: absolute;
-        top: 85px;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
     }
-    .nav-links a{
-        color: var(--text-color);
-        border-radius: 0px;
-    }
-    .logo-text a {
-        color: var(--text-color);
-    }
-    .nav-links.active {
+    .mobile-nav{
         display: flex;
+        justify-content: space-between;
+        padding: 15px;
+    }
+    .logo{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0px;
+        align-items: center;
+    }
+    .logo img{
+        width: 50px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    .custom-select {
+        position: relative;
+        right: 5%;
+    }
+    .custom-select p{
+        font-size: 20px;
+        position: fixed;
+        padding: 5px 10px;
+        right: 2%;
+        border-radius: 10px;
+        text-align: center;
+        transition: var(--tran-05);
+    }
+    .custom-select .options {
+        display: none;
+        right: 10%;
+        top: 5%;
+        width: 200px;
+        position: absolute;
+        background-color: var(--body-color);
+        border: 1px solid var(--stroke-color-draken);
+        border-radius: 5px;
+        position: fixed;
+    }
+    .custom-select .option i{
+        margin-right: 5px;
+        font-style: normal;
+        font-weight: 500;
+    }
+    .custom-select .option a{
+        text-decoration: none;
+        color: var(--text-color);
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+    }
+    .custom-select .option {
+        padding: 7px;
+        cursor: pointer;
+        width: 100%; 
+        box-sizing: border-box;
+    }
+    .custom-select .option:hover {
+        background-color: #f1f1f1;
     }
 
-    .burger {
-        display: flex;
-    }
-    .profile{
-        display: none;
-    }
-    .drop-prof{
-        display: flex;
-        flex-direction: column;
-        background-color: rgb(199, 204, 199);
-    }
-    #nav-login{
-        border: none;
-        color: var(--text-color);
-        padding: 10px 30px;
-        border-radius: 30px;
-        margin-left: 0px;
-    }
-    #nav-login:hover{
-        background-color: var(--primary-kuning-color);
-        color: var(--body-color);
-        box-shadow: 0 2px 6px var(--primary-kuning-color);
-    }
 }
 /* Navbar end
 ================================================= */

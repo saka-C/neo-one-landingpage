@@ -1132,8 +1132,8 @@ p.desc{
 }
 .community-card-container{
     display: grid;
-    justify-content: space-evenly;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 30px;
 }
 .user-joining{
     display: flex;
@@ -1197,15 +1197,15 @@ p.desc{
 @media (max-width: 1204px){
     .community-card-container{
         display: grid;
-        grid-template-columns: auto auto auto;
-        gap: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 20px;
     }
 }
 @media (max-width: 1031px){
     .community-card-container{
         display: grid;
-        grid-template-columns: auto auto;
-        gap: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 20px;
     }
 }
 @media (max-width: 875px){
@@ -1216,17 +1216,17 @@ p.desc{
 }
 @media (max-width: 800px){
     .community-card-container{
-        justify-content: center;
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 20px;
     }
 
 }
 @media (max-width: 715px){
     .community-card-container{
         display: grid;
-        grid-template-columns: auto auto;
-        justify-content: center;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 20px;
     }
     .community-card{
         width: 100%;
@@ -1264,8 +1264,9 @@ p.desc{
 
 /* =========== Project Properties CSS ============= */
 .container-card-project{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
 }
 .card-project{
@@ -1279,7 +1280,7 @@ p.desc{
 }
 .card-project .img-project img{
     width: 100%; 
-    height: 100%; 
+    height: 120px; 
     object-fit: cover;
     border-radius: 10px 10px 0px 0px;
     border-bottom: 1px solid var(--stroke-color);
@@ -1298,7 +1299,8 @@ p.desc{
     font-size: 13px;
 }
 .btn-project{
-    padding: 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
     display: flex;
     justify-content: end;
     align-items: center;
@@ -1307,6 +1309,8 @@ p.desc{
 .btn-project a{
     text-decoration: none;
     color: var(--text-color);
+    font-size: 13px;
+    font-weight: 500;
 }
 .btn-project #view{
     background-color: var(--body-color);
@@ -1316,8 +1320,125 @@ p.desc{
     border: 1px solid var(--stroke-color);
 }
 .btn-project #visit{
-    background-color: var(--primary-merah-color);
+    background-color: var(--primary-hijau-color);
     padding: 5px 20px;
     border-radius: 20px;
     color: var(--body-color);
+}
+.btn-project #visit i{
+    margin-left: 5px;
+}
+.project-by{
+    background-color: var(--body-color);
+    box-shadow: 0 2px 4px var(--shadow-color);
+    padding: 20px;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+.project-profile{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.project-profile h3 p{
+    font-size: 12px;
+    font-weight: 500;
+}
+.project-profile img{
+    border: 1px solid var(--stroke-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    margin-right: 10px;
+}
+
+/* =========== Project Properties CSS ============= */
+
+.detail-project-container{
+    width: 100%;
+}
+.detail-project{
+    padding: 40px;
+    border-radius: 30px;
+    background-color: var(--body-color);
+    box-shadow: 0 2px 4px var(--shadow-color);
+    border: 1px solid var(--stroke-color);
+}
+.detail-project h1{
+    margin-bottom: 10px;
+}
+.detail-project h1 a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+.detail-project .detail-stack span{
+    font-weight: 500;
+}
+.detail-project h1 a:hover{
+    text-decoration: underline;
+}
+.detail-project-container .img-project{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.detail-project-container .img-project img{
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    border: 1px solid var(--stroke-color);
+    border-radius: 5px;
+}
+.detail-project .detail-stack{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.detail-project ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+    row-gap: 10px;
+    margin-top: 5px;
+}
+.detail-project ul li{
+    text-align: center;
+}
+.detail-project ul li p{
+    border: 1px solid var(--primary-biru-color);
+    border-radius: 50px;
+    padding: 5px 10px;
+    font-weight: 600;
+    font-size: 14px;
+}
+@media (max-width: 1050px){
+    .detail-project ul li p{
+        font-size: 15px;
+    }   
+    .detail-project ul{
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+}
+@media (max-width: 800px){
+    .detail-project ul li p{
+        font-size: 15px;
+    }   
+    .detail-project ul{
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+    .detail-project{
+        padding: 0px;
+        border-radius: 0px;
+        box-shadow: none;
+        border: none;
+    }
+}
+@media (max-width: 480px){
+    .detail-project ul{
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+    .detail-project ul li p{
+        font-size: 14px;
+    }   
 }

@@ -38,6 +38,8 @@ var openModule = null;
       openModule = subBab;
     }
   }
+
+// mobile-nav
   const customSelect = document.querySelector(".custom-select");
     const options = customSelect.querySelector(".options");
 
@@ -45,6 +47,7 @@ var openModule = null;
       options.style.display = options.style.display === "block" ? "none" : "block";
     });
 
+ // like
     let isLiked = [false, false]; // Array untuk melacak status like pada setiap card
 
         function toggleLike(button) {
