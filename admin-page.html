@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./asset/logo-neo1.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style/admin.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Dashboard Admin</title>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <button class="hamburger" id="hamburger">☰</button>
+            <div class="logo">
+              <img src="asset/logo-no-bg.png" alt="">
+            </div>
+            <nav>
+              <a href="admin-page.html" id="merah"><i class='bx bxs-tachometer'></i>Dashboard</a>
+              <a href="list-learn.html" id="hijau">Add Data</a>
+              <a href="community.html" id="biru">Data User</a>
+              <a href="project-properties.html" id="kuning">Project Properties</a>
+            </nav>
+            <div class="bottom-nav">
+                <a href="#" ><i class='bx bx-log-out icon' ></i>Logout</a>
+            </div>
+        </div>
+        <!-- <div class="mobile-nav">
+          <div class="logo">
+            <img src="asset/logo-no-bg.png" alt="">
+          </div>
+          <div class="custom-select">
+            <p>☰</p>
+            <div class="options">
+              <div class="option"><a href="list-learn.html"><i>📖</i>Learn with Neo One</a></div>
+              <div class="option"><a href="community.html"><i>👋</i>Community</a></div>
+              <div class="option"><a href="project-properties.html"><i>🏗️</i>Project Properties</a></div>
+              <div class="option"><a href="#"><i class='bx bxs-user-circle' ></i>Profile</a></div>
+              <div class="option"><a href="index.html"><i class='bx bx-log-out icon' ></i>Logout</a></div>
+            </div>
+          </div> -->
+    </div>
+        <div class="switch-mobile ">
+            <div class="main-content">
+                <h1>hello world</h1>
+            </div>
+        </div>
+    </div>
+
+
+<script>
+    const hamburger = document.getElementById("hamburger");
+    const sidebar = document.querySelector(".sidebar");
+    const hamburgerBtn = document.querySelector(".hamburger");
+    const container = document.querySelector(".container");
+
+    hamburger.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+    });
+    hamburger.addEventListener("click", () => {
+        hamburgerBtn.classList.toggle("active");
+    });
+    hamburger.addEventListener("click", () => {
+        container.classList.toggle("active");
+    });
+</script>
+
+</body>
+</html>
